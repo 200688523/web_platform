@@ -1,0 +1,3 @@
+[submodule "frontend/web_platform_system_module"]
+	path = frontend/web_platform_system_module
+	url = https://github.com/200688523/web_platform_system_module.git

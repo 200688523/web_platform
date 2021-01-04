@@ -1,6 +1,15 @@
 {
   "name": "root",
   "private": true,
+  "scripts": {
+    "install": "yarn run commons-install && yarn run micr-registry-install && yarn run gateway-install",
+    "commons-install": "yarn --cwd ./packages/libs/commons run install",
+    "micr-registry-install": "yarn --cwd ./packages/libs/microservices-registry",
+    "gateway-install": "yarn --cwd ./packages/gateway run install",
+    "start": "yarn run gateway-start && yarn run auth-start",
+    "gateway-start": "yarn --cwd ./packages/gateway run start",
+    "auth-start": "yarn --cwd ./packages/auth run start"
+  },
   "devDependencies": {
     "lerna": "^3.22.1"
   }
